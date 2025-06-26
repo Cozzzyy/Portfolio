@@ -67,7 +67,7 @@ const ParticlesComponent = () => {
                     color: "#FFFFFF",
                     distance: 150,
                     enable: true,
-                    opacity: 0.3,
+                    opacity: 0.2,
                     width: 1,
                 },
                 move: {
@@ -87,7 +87,7 @@ const ParticlesComponent = () => {
                     value: 200,
                 },
                 opacity: {
-                    value: 0.8,
+                    value: 0.4,
                 },
                 shape: {
                     type: "circle",
@@ -115,7 +115,7 @@ const ParticlesComponent = () => {
                 height: "100%",
                 top: 0,
                 left: 0,
-                zIndex: -1,
+                zIndex: -10,
             }}
         />
     )
