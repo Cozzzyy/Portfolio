@@ -1,0 +1,70 @@
+/* App.css */
+
+/* ---- reset ---- */
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+    /* Important: React app usually renders into a root div.
+       Ensure your root div or body covers the full screen if needed for particles.js */
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00061f;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1; /* Make sure particles are in the background */
+}
+
+/* ---- stats.js ---- */
+.count-particles {
+    background: #000022;
+    position: absolute;
+    top: 48px; /* Adjusted if statsRef container holds the stats.js output */
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    z-index: 1; /* Make sure count is above particles */
+}
+
+/* The stats-container for stats.js if you chose to put it there */
+.stats-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* stats.js injects its own styles, so this container just provides a parent */
+    z-index: 1; /* Make sure stats are above particles */
+}
+
+.js-count-particles {
+    font-size: 1.1em;
+}
+
+/* Removed #stats rule as stats.js adds its own styles to its domElement directly */
+.count-particles {
+    -webkit-user-select: none;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* These rules are for the count-particles div, not for #stats itself */
+.count-particles {
+    border-radius: 0 0 3px 3px;
+}
