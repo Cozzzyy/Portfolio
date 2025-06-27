@@ -39,8 +39,7 @@ export function AboutMe({ id }: AboutMeProps) {
             >
                 Hi, I’m Cosmin, a full-stack developer with a passion for solving complex problems and building clean,
                 scalable solutions. I specialize in Spring Boot, .NET, and React, but I’m always exploring new
-                technologies to stay sharp and versatile. Writing high-quality, maintainable code that goes beyond
-                expectations is what drives me.
+                technologies to stay sharp and versatile.
             </motion.h1>
             <motion.div
                 variants={itemVariants}
