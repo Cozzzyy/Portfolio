@@ -12,7 +12,7 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
     return (
         <section
             id={id}
-            className="flex flex-col z-10 min-h-screen mb-5 px-8 py-8 w-3/3 lg:w-3/4 lg:px-4 "
+            className="flex flex-col z-10 min-h-screen mb-5 px-8 py-5 w-3/3 lg:w-3/4 lg:px-4 "
         >
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 z-10">
                 <h2 className="text-3xl font-light text-white lg:w-2/3">
