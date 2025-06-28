@@ -1,19 +1,28 @@
-import { useState } from "react";
+import { motion } from "framer-motion";
+import { ProjectOverview } from "./ProjectOverview.tsx";
+import { containerVariants } from "../../utils/animations.ts";
 
 interface ProjectsSectionProps {
     id: string;
 }
 
-const images = ["/Poker.png", "/Poker2.png", "/Poker3.png"];
+const pokerImages = ["/Poker.png", "/Poker2.png", "/Poker3.png"];
+const pokerTechImages = ["/Spring.png", "/React.png"];
+const vrImages = ["/vr3.png", "/vr1.png", "/vr2.png"];
+
+const projectVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export function ProjectsSection({ id }: ProjectsSectionProps) {
-    const [currentImage, setCurrentImage] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
     return (
-        <section
+        <motion.section
             id={id}
             className="flex flex-col z-10 min-h-screen mb-5 px-8 py-5 w-3/3 lg:w-3/4 lg:px-4 "
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
         >
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 z-10">
                 <h2 className="text-3xl font-light text-white lg:w-2/3">
@@ -22,86 +31,35 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
                 <hr className="border-t border-[#00C8FF] mt-2.5 w-full" />
             </div>
 
-            <div className="flex flex-col lg:flex-row mt-10 gap-10">
-                {/* Text Section */}
-                <div className="flex flex-col lg:justify-start mt-6 lg:mt-12 w-full lg:w-1/2">
-                    <h4 className="text-3xl font-bold text-[#00C8FF]">Poker</h4>
-                    <h4 className="text-md text-gray-500">Duration - 6 weeks</h4>
+            <motion.div
+                variants={projectVariants}
+                initial="hidden"
+                animate="visible"
+                className="mt-10"
+            >
+                <ProjectOverview
+                    title="Poker"
+                    duration="6 weeks"
+                    description="During Integration Project 2, I collaborated on creating a full-stack poker website over six weeks using Spring Boot (backend), React (frontend), and Keycloak for secure authentication. This project sharpened my skills in building secure, scalable web applications with modern technologies."
+                    techImages={pokerTechImages}
+                    images={pokerImages}
+                />
+            </motion.div>
 
-                    <div className="flex flex-col justify-center items-center w-full bg-[#00112D] mt-4 text-white rounded-lg shadow-md">
-                        <h4 className="text-md p-5">
-                            During Integration Project 2, I collaborated on creating a full-stack poker website over six weeks using Spring Boot (backend), React (frontend), and Keycloak for secure authentication. This project sharpened my skills in building secure, scalable web applications with modern technologies.
-                        </h4>
-                    </div>
-
-                    <div className="flex flex-row w-full mt-7 gap-4">
-                        <img className="w-10 h-10 sm:w-11 sm:h-11" src="/Spring.png" alt="Spring" />
-                        <img className="w-10 h-10 sm:w-11 sm:h-11" src="/React.png" alt="React" />
-                    </div>
-                </div>
-
-                {/* Image Section */}
-                <div className="flex flex-col items-center w-full lg:w-[800px] relative">
-
-                    <div
-                        className="relative w-full h-45 sm:h-80 md:h-96 lg:h-[400px] group cursor-pointer"
-                        onClick={() => setIsModalOpen(true)}
-                    >
-                        <img
-                            className="rounded-lg shadow-lg object-contain w-full h-full transition duration-1000 ease-in-out"
-                            src={images[currentImage]}
-                            alt={`Poker Project ${currentImage + 1}`}
-                        />
-                    </div>
-
-                    {/* Navigation Circles */}
-                    <div className="flex justify-center mt-4 space-x-2">
-                        {images.map((_, index) => (
-                            <button
-                                key={index}
-                                onMouseEnter={() => setCurrentImage(index)}
-                                className={`w-3 h-3 rounded-full ${
-                                    currentImage === index
-                                        ? "bg-[#00C8FF]"
-                                        : "bg-gray-500"
-                                } hover:bg-[#008FCC] transition duration-300`}
-                            ></button>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Modal */}
-            {isModalOpen && (
-                <div className="fixed inset-0 mt-10 bg-black bg-opacity-80 flex flex-col items-center justify-center z-50">
-                    <div className="relative w-3/4 h-3/4">
-                        <img
-                            className="rounded-lg shadow-lg object-contain w-full h-full"
-                            src={images[currentImage]}
-                            alt={`Poker Project ${currentImage + 1}`}
-                        />
-                    </div>
-                    <div className="flex justify-center mt-4 space-x-2">
-                        {images.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentImage(index)}
-                                className={`w-3 h-3 rounded-full ${
-                                    currentImage === index
-                                        ? "bg-[#00C8FF]"
-                                        : "bg-gray-500"
-                                } hover:bg-[#008FCC] transition duration-300`}
-                            ></button>
-                        ))}
-                    </div>
-                    <button
-                        className="mt-5 px-4 py-2 bg-[#00C8FF] text-white rounded-lg hover:bg-[#008FCC] transition duration-300"
-                        onClick={() => setIsModalOpen(false)}
-                    >
-                        Close
-                    </button>
-                </div>
-            )}
-        </section>
+            <motion.div
+                variants={projectVariants}
+                initial="hidden"
+                animate="visible"
+                className="mt-10"
+            >
+                <ProjectOverview
+                    title="3D Bounded Boxes in VR"
+                    duration="6 weeks"
+                    description="For this project, I explored how Virtual Reality (VR) could make labeling 3D point clouds easier and more efficient than using a regular mouse and keyboard. I built a simple VR app where users can place 3D bounding boxes around objects in LiDAR point clouds. The app runs in a web browser using tools like Three.js and WebXR, and it works with a VR headset and a high-performance computer."
+                    techImages={pokerTechImages}
+                    images={vrImages}
+                />
+            </motion.div>
+        </motion.section>
     );
 }
