@@ -14,13 +14,10 @@ const ParticlesComponent = () => {
         });
     }, []);
 
-    // You can keep this function if you want to log, but it won't be passed as a prop
-    // const particlesLoaded = (container: never) => {
-    //     console.log(container);
-    // };
+    const options = useMemo(() => {
+        const isMobile = window.innerWidth < 768; // Define mobile screen width threshold
 
-    const options = useMemo(
-        () => ({
+        return {
             background: {
                 color: {
                     value: "#000717",
@@ -30,11 +27,11 @@ const ParticlesComponent = () => {
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
+                        enable: !isMobile, // Disable click interaction on mobile
                         mode: "repulse",
                     },
                     onHover: {
-                        enable: true,
+                        enable: !isMobile, // Disable hover interaction on mobile
                         mode: "grab",
                     },
                 },
@@ -86,11 +83,9 @@ const ParticlesComponent = () => {
                 },
             },
             detectRetina: true,
-        }),
-        []
-    );
+        };
+    }, []);
 
-    // Only render the Particles component once the engine is initialized
     if (!init) {
         return null;
     }
