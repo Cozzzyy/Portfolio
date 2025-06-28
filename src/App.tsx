@@ -7,15 +7,16 @@ import {ProjectsSection} from "./components/Projects/ProjectsSection.tsx";
 
 function App() {
     return (
-        <div className="min-h-screen bg-[#000717]"> {/* Nieuwe wrapper div */}
+        <div className="relative min-h-screen w-full bg-[#000717] overflow-x-hidden">
             <Particles/>
             <NavigationBar/>
-            <div className={"flex flex-col items-center justify-center gap-15 font-sans"}>
+            <main className="relative flex flex-col items-center justify-center gap-15 font-sans">
                 <AboutMe id={"about-me"}/>
                 <ProjectsSection id={"projects"}/>
-            </div>
+            </main>
         </div>
     )
 }
+
 
 export default App

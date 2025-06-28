@@ -90,18 +90,18 @@ const ParticlesComponent = () => {
         return null;
     }
 
+
     return (
         <Particles
             id="tsparticles"
             options={options}
             style={{
                 position: "fixed",
-                width: "100vw",
-                height: '100vh', // Veranderd van 100% naar 100vh
+                inset: 0,  // Dit vervangt top: 0, left: 0
+                width: "100%",
+                height: "100%",
                 objectFit: "cover",
                 backgroundAttachment: "fixed",
-                top: 0,
-                left: 0,
                 zIndex: -10,
             }}
         />
