@@ -97,7 +97,7 @@ const ParticlesComponent = () => {
             style={{
                 position: "fixed",
                 width: "100%",
-                height: "100%",
+                height: "100vh", // Use 100vh to cover the full viewport height
                 top: 0,
                 left: 0,
                 zIndex: -10,
