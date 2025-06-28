@@ -96,8 +96,8 @@ const ParticlesComponent = () => {
             options={options}
             style={{
                 position: "fixed",
-                width: "100%",
-                height: "100vh", // Use 100vh to cover the full viewport height
+                width: "100vw",
+                height: "100dvh", // Use 100vh to cover the full viewport height
                 objectFit: "cover",
                 backgroundAttachment: "fixed",
                 top: 0,
