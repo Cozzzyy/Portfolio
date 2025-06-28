@@ -15,7 +15,7 @@ const ParticlesComponent = () => {
     }, []);
 
     const options = useMemo(() => {
-        const isMobile = window.innerWidth < 768; // Define mobile screen width threshold
+        const isMobile = window.innerWidth < 768;
 
         return {
             background: {
@@ -27,11 +27,11 @@ const ParticlesComponent = () => {
             interactivity: {
                 events: {
                     onClick: {
-                        enable: !isMobile, // Disable click interaction on mobile
+                        enable: !isMobile,
                         mode: "repulse",
                     },
                     onHover: {
-                        enable: !isMobile, // Disable hover interaction on mobile
+                        enable: !isMobile,
                         mode: "grab",
                     },
                 },
@@ -95,7 +95,7 @@ const ParticlesComponent = () => {
             id="tsparticles"
             options={options}
             style={{
-                position: "absolute",
+                position: "fixed",
                 width: "100%",
                 height: "100%",
                 top: 0,
