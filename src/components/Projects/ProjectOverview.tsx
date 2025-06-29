@@ -8,6 +8,7 @@ interface ProjectOverviewProps {
     techImages: string[];
     images: string[];
     demoVideoUrl: string; // Add a prop for the YouTube video URL
+    gitHubUrl: string; // Optional prop for GitHub URL
 }
 
 export function ProjectOverview({
@@ -17,6 +18,7 @@ export function ProjectOverview({
                                     techImages,
                                     images,
                                     demoVideoUrl,
+    gitHubUrl
                                 }: ProjectOverviewProps) {
     const [currentImage, setCurrentImage] = useState(0);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -54,7 +56,11 @@ export function ProjectOverview({
                     >
                         Demo
                     </button>
-                    <img className={"w-7 h-7 sm:w-8 sm:h-8 ml-4 mt-0.5"} src="/white-github.png" alt="GitHub" />
+                    {gitHubUrl && (
+                    <a href={gitHubUrl} target="_blank" rel="noopener noreferrer">
+                        <img className={"w-7 h-7 sm:w-8 sm:h-8 ml-4 mt-0.5"} src="/white-github.png" alt="GitHub" />
+                    </a>
+                    )}
                 </div>
             </div>
 

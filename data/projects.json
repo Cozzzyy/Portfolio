@@ -1,6 +1,6 @@
 [
   {
-    "title": "3D Bounded Boxes in VR",
+    "title": "Annotating Point Clouds in VR",
     "duration": "6 weeks",
     "description": "For this project, I explored how Virtual Reality (VR) could make labeling 3D point clouds easier and more efficient than using a regular mouse and keyboard. I built a simple VR app where users can place 3D bounding boxes around objects in LiDAR point clouds. The app runs in a web browser using tools like Three.js and WebXR, and it works with a VR headset and a high-performance computer.",
     "techImages": [
@@ -13,7 +13,8 @@
       "/vr1.png",
       "/vr2.png"
     ],
-    "demoVideoUrl": "https://youtube.com/embed/dw5c3H2UIDg"
+    "demoVideoUrl": "https://youtube.com/embed/dw5c3H2UIDg",
+    "githubUrl": "https://github.com/Cozzzyy/Annotating-point-clouds-in-VR"
   },
   {
     "title": "Poker",
@@ -29,7 +30,8 @@
       "/Poker2.png",
       "/Poker3.png"
     ],
-    "demoVideoUrl": "https://youtube.com/embed/2QlJ3y2-h58"
+    "demoVideoUrl": "https://youtube.com/embed/2QlJ3y2-h58",
+    "githubUrl": ""
   },
   {
     "title": "Weight Tracking App",
@@ -45,6 +47,7 @@
       "/WeightNow3.png",
       "/WeightNow2.png"
     ],
-    "demoVideoUrl": ""
+    "demoVideoUrl": "",
+    "githubUrl": "https://github.com/Cozzzyy/WeightNow-App"
   }
 ]

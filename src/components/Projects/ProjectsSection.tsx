@@ -44,6 +44,7 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
                         techImages={project.techImages}
                         images={project.images}
                         demoVideoUrl={project.demoVideoUrl}
+                        gitHubUrl={project.githubUrl}
                     />
                 </motion.div>
             ))}
