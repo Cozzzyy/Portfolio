@@ -37,7 +37,7 @@ export function AboutMe({ id }: AboutMeProps) {
                 animate="show"
                 className="text-base sm:text-lg text-white opacity-75 z-10 my-3 font-sans text-center font-light max-w-xl"
             >
-                Hi, I’m Cosmin, a full-stack developer with a passion for solving complex problems and building clean,
+                Hi, I’m Cosmin, a full stack developer with a passion for solving complex problems and building clean,
                 scalable solutions. I specialize in Spring Boot, .NET, and React, but I’m always exploring new
                 technologies to stay sharp and versatile.
             </motion.h1>
