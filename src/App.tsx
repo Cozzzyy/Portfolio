@@ -4,6 +4,7 @@ import Particles from "./components/Particles.tsx";
 import {AboutMe} from "./components/Introduction/AboutMe.tsx";
 import {ProjectsSection} from "./components/Projects/ProjectsSection.tsx";
 import {Footer} from "./components/Footer.tsx";
+import {Contact} from "./components/Contact/ContactForm.tsx";
 
 function App() {
     return (
@@ -13,8 +14,10 @@ function App() {
             <main className="relative flex-grow flex flex-col items-center justify-center gap-15 font-sans">
                 <AboutMe id={"about-me"}/>
                 <ProjectsSection id={"projects"}/>
+                <Contact />
             </main>
             <Footer/>
+
         </div>
     )
 }

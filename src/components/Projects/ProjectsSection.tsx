@@ -17,7 +17,7 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
     return (
         <motion.section
             id={id}
-            className="flex flex-col z-10 min-h-screen mb-8 px-8 py-5 w-3/3 lg:w-3/4 lg:px-4 "
+            className="flex flex-col z-10 min-h-screen mb-8 px-8 py-5 w-3/3 lg:w-3/4 lg:px-4 gap-15 "
             variants={containerVariants}
             initial="hidden"
             animate="show"
