@@ -23,7 +23,7 @@ export function ProjectOverview({
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false); // State for video modal
 
     return (
-        <div className="flex flex-col lg:flex-row lg:md-5 gap-10">
+        <div className="flex flex-col lg:flex-row lg:md-5 gap-10 mb-15">
             <div className="flex flex-col lg:mt-12 w-full lg:w-1/2">
                 <h4 className="text-3xl font-bold text-[#00C8FF]">{title}</h4>
                 <div className={"flex flex-row justify-between items-center mt-4"}>

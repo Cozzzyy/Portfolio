@@ -1,21 +1,5 @@
 [
   {
-    "title": "Poker",
-    "duration": "6 weeks",
-    "description": "During Integration Project 2, I collaborated on creating a full-stack poker website over six weeks using Spring Boot (backend), React (frontend), and Keycloak for secure authentication. This project sharpened my skills in building secure, scalable web applications with modern technologies.",
-    "techImages": [
-      "/Spring.png",
-      "/React.png",
-      "/PostgresSQL.png"
-    ],
-    "images": [
-      "/Poker.png",
-      "/Poker2.png",
-      "/Poker3.png"
-    ],
-    "demoVideoUrl": "https://youtube.com/embed/2QlJ3y2-h58"
-  },
-  {
     "title": "3D Bounded Boxes in VR",
     "duration": "6 weeks",
     "description": "For this project, I explored how Virtual Reality (VR) could make labeling 3D point clouds easier and more efficient than using a regular mouse and keyboard. I built a simple VR app where users can place 3D bounding boxes around objects in LiDAR point clouds. The app runs in a web browser using tools like Three.js and WebXR, and it works with a VR headset and a high-performance computer.",
@@ -32,18 +16,34 @@
     "demoVideoUrl": "https://youtube.com/embed/dw5c3H2UIDg"
   },
   {
+    "title": "Poker",
+    "duration": "6 weeks",
+    "description": "During Integration Project 2, I collaborated on creating a full-stack poker website over six weeks using Spring Boot (backend), React (frontend), and Keycloak for secure authentication. This project sharpened my skills in building secure, scalable web applications with modern technologies.",
+    "techImages": [
+      "/Spring.png",
+      "/React.png",
+      "/PostgresSQL.png"
+    ],
+    "images": [
+      "/Poker.png",
+      "/Poker2.png",
+      "/Poker3.png"
+    ],
+    "demoVideoUrl": "https://youtube.com/embed/2QlJ3y2-h58"
+  },
+  {
     "title": "Weight Tracking App",
     "duration": "3 days",
-    "description": "For this project, I explored how Virtual Reality (VR) could make labeling 3D point clouds easier and more efficient than using a regular mouse and keyboard. I built a simple VR app where users can place 3D bounding boxes around objects in LiDAR point clouds. The app runs in a web browser using tools like Three.js and WebXR, and it works with a VR headset and a high-performance computer.",
+    "description": "WeightNow! is a personal weight-tracking app I built after struggling to find a clean, free option. Developed with Next.js, Supabase, Tailwind, and Shadcn, and deployed on Vercel, it lets users register, log in, and track weight entries. I use it daily and plan to add features like AI-based progress insights and calorie integration. Built for learning and long-term use.",
     "techImages": [
       "/NextJs-white.png",
       "Vercel.png",
       "Supabase.png"
     ],
     "images": [
-      "/vr3.png",
-      "/vr1.png",
-      "/vr2.png"
+      "/WeightNow1.png",
+      "/WeightNow3.png",
+      "/WeightNow2.png"
     ],
     "demoVideoUrl": "https://youtube.com/embed/dw5c3H2UIDg"
   }
