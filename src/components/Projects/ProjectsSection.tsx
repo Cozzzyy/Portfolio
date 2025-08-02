@@ -1,19 +1,16 @@
-import { motion } from "framer-motion";
-import { ProjectOverview } from "./ProjectOverview.tsx";
-import { containerVariants } from "../../utils/animations.ts";
+import {motion} from "framer-motion";
+import {ProjectOverview} from "./ProjectOverview.tsx";
+import {containerVariants} from "../../utils/animations.ts";
 import projectsData from "../../../data/projects.json";
-import type {Project} from "../../types/Project.ts"; // Import the JSON file
+import type {Project} from "../../types/Project.ts";
+import FadeContent from '../Ui/Animations/FadeContent.tsx'
+import {TextAnimate} from "../Ui/Animations/TextAnimate.tsx";
 
 interface ProjectsSectionProps {
     id: string;
 }
 
-const projectVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-export function ProjectsSection({ id }: ProjectsSectionProps) {
+export function ProjectsSection({id}: ProjectsSectionProps) {
     return (
         <motion.section
             id={id}
@@ -23,20 +20,16 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
             animate="show"
         >
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 z-10">
-                <h2 className="text-3xl font-light text-white lg:w-2/3">
-                    Some projects I have been working on
-                </h2>
-                <hr className="border-t border-[#00C8FF] mt-2.5 w-full" />
-            </div>
+                <TextAnimate animation="blurInUp" by="character" as={'h2'}
+                             className={"text-3xl font-light text-white lg:w-2/3"} once>
 
-            {projectsData.map((project: Project, index: number) => (
-                <motion.div
-                    key={index}
-                    variants={projectVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="mt-10"
-                >
+                    Some projects I have been working on
+
+                </TextAnimate>
+                <hr className="border-t border-[#00C8FF] mt-2.5 w-full"/>
+            </div>
+            {projectsData.map((project: Project) => (
+                <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
                     <ProjectOverview
                         title={project.title}
                         duration={project.duration}
@@ -46,7 +39,7 @@ export function ProjectsSection({ id }: ProjectsSectionProps) {
                         demoVideoUrl={project.demoVideoUrl}
                         gitHubUrl={project.githubUrl}
                     />
-                </motion.div>
+                </FadeContent>
             ))}
         </motion.section>
     );

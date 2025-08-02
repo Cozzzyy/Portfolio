@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {containerVariants, itemVariants} from "../../utils/animations.ts";
+import {TextAnimate} from "../Ui/Animations/TextAnimate.tsx";
 import {ProjectsButton} from "./ProjectButton.tsx";
 
 interface AboutMeProps {
@@ -29,7 +30,9 @@ export function AboutMe({ id }: AboutMeProps) {
                 animate="show"
                 className="text-lg sm:text-md text-[#00C8FF] z-10 my-4 font-sans text-center"
             >
-                Full Stack Developer
+                <TextAnimate animation="blurInUp" by="character" once>
+                    Junior Full Stack Developer
+                </TextAnimate>
             </motion.h1>
             <motion.h1
                 variants={itemVariants}
